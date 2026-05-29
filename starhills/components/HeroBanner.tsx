@@ -24,7 +24,7 @@ export default function HeroBanner() {
             i === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
           style={{
-            backgroundImage: `url(${slide.image}), linear-gradient(135deg, #0F2A5A 0%, #1a4080 100%)`,
+            backgroundImage: `url(${slide.image}), linear-gradient(135deg, #016870 0%, #018086 100%)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -33,36 +33,27 @@ export default function HeroBanner() {
         </div>
       ))}
 
-      {/* Text overlay */}
-      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-4">
-        <p className="text-gold text-sm md:text-base font-medium tracking-widest mb-4 uppercase">
-          Official Sales Website
-        </p>
-        {slides.map((slide, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 flex flex-col items-center justify-center px-4 transition-opacity duration-1000 ${
-              i === current ? 'opacity-100' : 'opacity-0'
-            }`}
+      {slides.map((slide, i) => (
+        <div
+          key={i}
+          className={`absolute inset-0 flex flex-col items-center justify-center px-4 transition-opacity duration-1000 z-20 text-center ${
+            i === current ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight drop-shadow-lg">
+            {slide.title}
+          </h1>
+          <p className="text-white text-base md:text-xl mb-8 drop-shadow-md">
+            {slide.subtitle}
+          </p>
+          <a
+            href="#reservation"
+            className="inline-block bg-brand text-white font-bold px-8 py-4 rounded-full text-base md:text-lg hover:bg-brand-dark transition-colors shadow-xl"
           >
-            <p className="text-gold text-sm md:text-base font-medium tracking-widest mb-4 uppercase">
-              Official Sales Website
-            </p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight drop-shadow-lg">
-              {slide.title}
-            </h1>
-            <p className="text-white text-base md:text-xl mb-8 drop-shadow-md">
-              {slide.subtitle}
-            </p>
-            <a
-              href="#reservation"
-              className="inline-block bg-gold text-white font-bold px-8 py-4 rounded-full text-base md:text-lg hover:opacity-90 transition-opacity shadow-xl"
-            >
-              방문예약 신청하기
-            </a>
-          </div>
-        ))}
-      </div>
+            방문예약 신청하기
+          </a>
+        </div>
+      ))}
 
       {/* Left/Right arrows */}
       <button
@@ -87,7 +78,7 @@ export default function HeroBanner() {
             key={i}
             onClick={() => setCurrent(i)}
             className={`w-3 h-3 rounded-full transition-all ${
-              i === current ? 'bg-gold w-8' : 'bg-white/60'
+              i === current ? 'bg-brand w-8' : 'bg-white/60'
             }`}
             aria-label={`슬라이드 ${i + 1}`}
           />
