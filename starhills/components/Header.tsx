@@ -28,17 +28,14 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-        {/* Logo only — no text */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center"
           aria-label="용인양지 서희스타힐스 하이뷰 홈으로"
+          className={`font-bold text-lg tracking-tight transition-colors ${
+            scrolled ? 'text-brand' : 'text-white'
+          }`}
         >
-          <img
-            src="/images/logo.png"
-            alt="용인양지 서희스타힐스 하이뷰 로고"
-            className="h-10 md:h-12 w-auto object-contain"
-          />
+          용인양지 서희스타힐스 하이뷰
         </button>
 
         {/* Desktop GNB */}
