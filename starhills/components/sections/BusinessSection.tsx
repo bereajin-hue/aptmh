@@ -40,7 +40,7 @@ export default function BusinessSection() {
               {pairs.map((pair, pi) => (
                 <tr key={pi} className={pi % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   {/* Left cell */}
-                  <td className="py-4 px-5 font-bold text-navy bg-gray-100 border border-gray-200 whitespace-nowrap w-[110px] text-center tracking-wider">
+                  <td className="py-4 px-5 font-bold text-brand bg-gray-100 border border-gray-200 whitespace-nowrap w-[110px] text-center tracking-wider">
                     {pair[0].label}
                   </td>
                   <td className="py-4 px-5 text-gray-700 border border-gray-200 w-[35%]">
@@ -49,7 +49,7 @@ export default function BusinessSection() {
                   {/* Right cell — may be empty on last odd row */}
                   {pair[1] ? (
                     <>
-                      <td className="py-4 px-5 font-bold text-navy bg-gray-100 border border-gray-200 whitespace-nowrap w-[110px] text-center tracking-wider">
+                      <td className="py-4 px-5 font-bold text-brand bg-gray-100 border border-gray-200 whitespace-nowrap w-[110px] text-center tracking-wider">
                         {pair[1].label}
                       </td>
                       <td className="py-4 px-5 text-gray-700 border border-gray-200">
@@ -73,7 +73,7 @@ export default function BusinessSection() {
               className="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:shadow-md transition-shadow"
             >
               <div className="text-4xl mb-3">{point.icon}</div>
-              <h4 className="text-navy font-bold text-base mb-2">{point.title}</h4>
+              <h4 className="text-brand font-bold text-base mb-2">{point.title}</h4>
               <p className="text-gray-600 text-sm">{point.desc}</p>
             </div>
           ))}

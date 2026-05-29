@@ -27,7 +27,7 @@ export default function LocationSection() {
                   }}
                 />
               </div>
-              <div className="bg-white px-4 py-3 text-center text-sm font-medium text-navy">
+              <div className="bg-white px-4 py-3 text-center text-sm font-medium text-brand">
                 {img.caption}
               </div>
             </div>
@@ -42,11 +42,11 @@ export default function LocationSection() {
               className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
               <div className="text-4xl mb-3">{card.icon}</div>
-              <h4 className="text-navy font-bold text-base mb-3">{card.title}</h4>
+              <h4 className="text-brand font-bold text-base mb-3">{card.title}</h4>
               <ul className="space-y-1">
                 {card.points.map((pt) => (
                   <li key={pt} className="text-gray-600 text-xs flex items-start gap-1">
-                    <span className="text-gold mt-0.5 shrink-0">·</span>
+                    <span className="text-brand mt-0.5 shrink-0">·</span>
                     <span>{pt}</span>
                   </li>
                 ))}

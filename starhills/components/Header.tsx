@@ -28,23 +28,17 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+        {/* Logo only — no text */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-2"
+          className="flex items-center"
+          aria-label="용인양지 서희스타힐스 하이뷰 홈으로"
         >
           <img
             src="/images/logo.png"
             alt="용인양지 서희스타힐스 하이뷰 로고"
-            className="h-8 w-auto"
-            onError={(e) => {
-              e.currentTarget.style.display = 'none'
-            }}
+            className="h-10 md:h-12 w-auto object-contain"
           />
-          <span className={`font-bold text-base tracking-tight transition-colors ${
-            scrolled ? 'text-navy' : 'text-white'
-          }`}>
-            용인양지 서희스타힐스 하이뷰
-          </span>
         </button>
 
         {/* Desktop GNB */}
@@ -53,8 +47,8 @@ export default function Header() {
             <button
               key={label}
               onClick={() => scrollTo(sectionIds[i])}
-              className={`text-sm font-medium transition-colors hover:text-gold ${
-                scrolled ? 'text-navy' : 'text-white'
+              className={`text-sm font-medium transition-colors hover:text-brand ${
+                scrolled ? 'text-gray-700' : 'text-white'
               }`}
             >
               {label}
@@ -62,7 +56,7 @@ export default function Header() {
           ))}
           <a
             href={`tel:${siteConfig.header.phone.replace(/-/g, '')}`}
-            className="ml-4 bg-gold text-white px-4 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-opacity"
+            className="ml-4 bg-brand text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-dark transition-colors"
           >
             📞 {siteConfig.header.phone}
           </a>
@@ -70,7 +64,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className={`md:hidden p-2 transition-colors ${scrolled ? 'text-navy' : 'text-white'}`}
+          className={`md:hidden p-2 transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="메뉴 열기"
         >
@@ -91,14 +85,14 @@ export default function Header() {
             <button
               key={label}
               onClick={() => scrollTo(sectionIds[i])}
-              className="block w-full text-left px-6 py-4 text-navy font-medium border-b border-gray-100 hover:bg-gray-50"
+              className="block w-full text-left px-6 py-4 text-gray-700 font-medium border-b border-gray-100 hover:text-brand hover:bg-brand-light"
             >
               {label}
             </button>
           ))}
           <a
             href={`tel:${siteConfig.header.phone.replace(/-/g, '')}`}
-            className="block px-6 py-4 text-gold font-bold"
+            className="block px-6 py-4 text-brand font-bold"
           >
             📞 {siteConfig.header.phone}
           </a>

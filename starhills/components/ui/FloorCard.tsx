@@ -12,9 +12,9 @@ interface FloorData {
 export default function FloorCard({ floor }: { floor: FloorData }) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-      <div className="bg-navy px-4 py-3 flex items-center justify-between">
+      <div className="bg-brand px-4 py-3 flex items-center justify-between">
         <span className="text-white font-bold text-lg">{floor.type}㎡형</span>
-        <span className="text-gold text-sm font-medium">{floor.units.toLocaleString()}세대</span>
+        <span className="text-white opacity-80 text-sm font-medium">{floor.units.toLocaleString()}세대</span>
       </div>
       <div className="relative w-full h-56 bg-gray-100 flex items-center justify-center">
         <img
@@ -41,7 +41,7 @@ export default function FloorCard({ floor }: { floor: FloorData }) {
             </tr>
           </thead>
           <tbody>
-            <tr className="text-navy font-semibold">
+            <tr className="text-brand font-semibold">
               <td className="pt-2">{floor.exclusive}㎡</td>
               <td className="pt-2">{floor.supply}㎡</td>
               <td className="pt-2">{floor.contract}㎡</td>

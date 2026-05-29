@@ -30,11 +30,11 @@ export default function ComplexSection() {
           <div className="flex flex-col justify-center gap-6">
             {complex.features.map((f, i) => (
               <div key={f.title} className="flex gap-4">
-                <div className="shrink-0 w-10 h-10 bg-navy rounded-full flex items-center justify-center text-gold font-bold text-sm">
+                <div className="shrink-0 w-10 h-10 bg-brand rounded-full flex items-center justify-center text-white font-bold text-sm">
                   0{i + 1}
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy text-base mb-1">{f.title}</h4>
+                  <h4 className="font-bold text-brand text-base mb-1">{f.title}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>
               </div>

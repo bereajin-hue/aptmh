@@ -31,8 +31,8 @@ export default function FloorSection() {
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${
                 activeTab === tab
-                  ? 'bg-navy text-white shadow-md'
-                  : 'bg-white text-navy border border-navy hover:bg-navy/5'
+                  ? 'bg-brand text-white shadow-md'
+                  : 'bg-white text-brand border border-brand hover:bg-brand-light'
               }`}
             >
               {tab}
