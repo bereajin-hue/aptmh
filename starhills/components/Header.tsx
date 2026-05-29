@@ -30,11 +30,21 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`font-bold text-lg tracking-tight transition-colors ${
-            scrolled ? 'text-navy' : 'text-white'
-          }`}
+          className="flex items-center gap-2"
         >
-          <span className="text-gold">서희</span>스타힐스 하이뷰
+          <img
+            src="/images/logo.png"
+            alt="용인양지 서희스타힐스 하이뷰 로고"
+            className="h-8 w-auto"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none'
+            }}
+          />
+          <span className={`font-bold text-base tracking-tight transition-colors ${
+            scrolled ? 'text-navy' : 'text-white'
+          }`}>
+            용인양지 서희스타힐스 하이뷰
+          </span>
         </button>
 
         {/* Desktop GNB */}
