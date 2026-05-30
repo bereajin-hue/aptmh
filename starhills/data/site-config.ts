@@ -6,7 +6,7 @@ export const siteConfig = {
     keywords:
       "용인양지 서희스타힐스, 서희스타힐스 하이뷰, 용인양지 서희스타힐스 분양가, 용인양지 서희스타힐스 모델하우스, 용인 반도체클러스터 아파트",
     canonical: "https://starhills.aptmh.kr",
-    ogImage: "/og-image.jpg",
+    ogImage: "/images/og-image.jpg",
     naverVerification: "ac4e5b89c2745004a56f0775149481fabe86688b",
     googleVerification: "o_BO_WZNZ2TTxSY7xi7-0B85WopoMiQdSvmhWRibDiE",
   },
