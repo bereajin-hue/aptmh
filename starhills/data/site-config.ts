@@ -8,7 +8,7 @@ export const siteConfig = {
     canonical: "https://starhills.aptmh.kr",
     ogImage: "/og-image.jpg",
     naverVerification: "",
-    googleVerification: "",
+    googleVerification: "o_BO_WZNZ2TTxSY7xi7-0B85WopoMiQdSvmhWRibDiE",
   },
 
   header: {
